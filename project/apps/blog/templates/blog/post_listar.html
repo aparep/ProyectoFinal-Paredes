@@ -1,0 +1,25 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+
+
+<table class="table table-striped">
+    <tr>
+        <th>Título de artículo</th>
+        <th>Contenido</th>
+        <th>Fecha</th>
+        <th></th>
+    </tr>
+    {% for post in posts %}
+    <tr> 
+        <td> {{post.Titulo}} </td>
+        <td> {{post.Contenido}} </td>
+        <td> {{post.Fecha}} </td>
+        <td> <a href="" class="btn btn-success">Leer más</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+{% endblock %}
